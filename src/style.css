@@ -17,7 +17,26 @@ body {
     font-family: 'Source Code Pro';
     color: white;
     padding-top: 100px;
+    animation: glow 2s ease-in-out infinite ;
 }
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 12px rgba(0, 119, 255, 0.982), 0 0 50px rgb(0, 132, 255), 0 0 100px rgb(0, 132, 255) ;
+    }
+}
+
+.Title:hover  {
+    animation-duration: .9s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+ }
+ @keyframes clignoter {
+   0%   { opacity:1; }
+   40%   {opacity:0; }
+   100% { opacity:1; }
+ }
+
 * {
   box-sizing: border-box;
 }
